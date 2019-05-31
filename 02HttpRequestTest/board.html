@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>게시판</title>
+
+	<style type="text/css">
+		label{width: 5em; display: inline-block; text-align: right;}
+	</style>
+</head>
+<body>
+
+	<h2>게시판 연습 웹페이지</h2>
+
+	<fieldset>
+		<legend>POST METHOD REQUEST Data with File</legend>
+
+		<form action="insertData.php" method="POST" enctype="multipart/form-data">
+			<p>
+				<label>Name:</label>
+				<input type="text" name="name">
+			</p>
+
+			<p>
+				<label>Message:</label>
+				<textarea rows="5" cols="40" name="msg"></textarea>
+			</p>
+
+			<p>
+				<label>첨부 파일:</label>
+				<input type="file" name="upload">
+			</p>
+
+			<p>
+				<input type="submit" value="완료">
+				<input type="reset" value="취소">
+			</p>
+			
+		</form>
+
+	</fieldset>
+
+	<!-- 게시글 보기 -->
+	<fieldset>
+		<legend>Load Data from DB</legend>
+
+		<form action="loadData.php" method="GET">
+			<input type="submit" value="게시글 보기">
+		</form>
+		
+	</fieldset>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Request Test</title>
+</head>
+<body>
+
+	<h2>This is Http Request test page</h2>
+
+	<fieldset>
+		<legend>GET METHOD TEST</legend>
+
+		<!-- HTTP에서 서버로 데이터를 보낼때 사용하는 태그문 -->
+		<form action="getTest.php" method="get">
+			
+			<p>
+				<label>NAME : </label>
+				<input type="text" name="name">
+			</p>
+
+			<p>
+				<label>MESSAGE : </label>
+				<input type="text" name="msg">
+			</p>
+
+			<p>
+				<input type="submit" name="">				
+				<input type="reset" name="">
+			</p>
+
+		</form>
+
+	</fieldset>
+
+	<!-- POST method test -->
+	<fieldset>
+		<legend>POST METHOD TEST</legend>
+
+		<!-- 제출버튼을 누르면 postTest.php가 실행! -->
+		<form action="postTest.php" method="post">
+
+			<p>
+				<label>이름 : </label>
+				<input type="text" name="name">				
+			</p>
+
+			<p>
+				<label>메세지 : </label>
+				<input type="text" name="msg">
+			</p>
+
+			<p>
+				<input type="submit" name="">
+				<input type="reset" name="">
+			</p>
+			
+		</form>
+
+
+	</fieldset>
+
+	<!-- 이미지파일 업로드 -->
+	<fieldset>
+		<legend>Image File Upload</legend>
+
+		<form action="uploadFile.php" method="post" enctype="multipart/form-data">
+			<p>
+				<label>첨부 파일 : </label>
+				<input type="file" name="upload">
+			</p>
+			<p>
+				<input type="submit" name="" value="보내기">
+				<input type="reset" name="" value="리셋">
+			</p>			
+		</form>
+		
+	</fieldset>
+
+
+</body>
+</html>
